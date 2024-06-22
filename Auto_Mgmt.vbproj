@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FDE3B24-3D9C-41EE-A8FE-2B961FF6A7E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Auto_Mgmt.My.MyApplication</StartupObject>
+    <RootNamespace>Auto_Mgmt</RootNamespace>
+    <AssemblyName>Auto_Mgmt</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Auto_Mgmt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Auto_Mgmt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auto Info Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Auto Info Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoInfo Report.Designer.vb">
+      <DependentUpon>AutoInfo Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AutoInfo Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autop Search edit del.Designer.vb">
+      <DependentUpon>Autop Search edit del.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Autop Search edit del.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto Mob Shop.Designer.vb">
+      <DependentUpon>Auto Mob Shop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Auto Mob Shop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto Part Info.Designer.vb">
+      <DependentUpon>Auto Part Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Auto Part Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto Stock1 Search.Designer.vb">
+      <DependentUpon>Auto Stock1 Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Auto Stock1 Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillGenerate.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillGenerate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BillGenerate1.Designer.vb">
+      <DependentUpon>BillGenerate1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BillGenerate1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillGenerate2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillGenerate2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BillView.Designer.vb">
+      <DependentUpon>BillView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BillView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cust Edit Del.Designer.vb">
+      <DependentUpon>Cust Edit Del.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cust Edit Del.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Information.Designer.vb">
+      <DependentUpon>Customer Information.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Information.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customer Search.Designer.vb">
+      <DependentUpon>Customer Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cust_Report.Designer.vb">
+      <DependentUpon>Cust_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cust_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Form.Designer.vb">
+      <DependentUpon>Login Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SaleREport.Designer.vb">
+      <DependentUpon>SaleREport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SaleREport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Form1.Designer.vb">
+      <DependentUpon>Sales Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Form.Designer.vb">
+      <DependentUpon>Stock Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StockReport.Designer.vb">
+      <DependentUpon>StockReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Registration.Designer.vb">
+      <DependentUpon>Users Registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Auto Info Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Auto Info Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoInfo Report.resx">
+      <DependentUpon>AutoInfo Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autop Search edit del.resx">
+      <DependentUpon>Autop Search edit del.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auto Mob Shop.resx">
+      <DependentUpon>Auto Mob Shop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auto Part Info.resx">
+      <DependentUpon>Auto Part Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auto Stock1 Search.resx">
+      <DependentUpon>Auto Stock1 Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillGenerate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BillGenerate.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillGenerate1.resx">
+      <DependentUpon>BillGenerate1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillGenerate2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BillGenerate2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillView.resx">
+      <DependentUpon>BillView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cust Edit Del.resx">
+      <DependentUpon>Cust Edit Del.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Information.resx">
+      <DependentUpon>Customer Information.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Search.resx">
+      <DependentUpon>Customer Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cust_Report.resx">
+      <DependentUpon>Cust_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Form.resx">
+      <DependentUpon>Login Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleREport.resx">
+      <DependentUpon>SaleREport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Form1.resx">
+      <DependentUpon>Sales Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock Form.resx">
+      <DependentUpon>Stock Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Stock Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockReport.resx">
+      <DependentUpon>StockReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Registration.resx">
+      <DependentUpon>Users Registration.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-login-affiliate-marketing-email-password-icon-gold-keys-and-locks-5a94a582489de7.2426834315196911382975.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-cropped%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageonline-co-cropped-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\imageonline-co-cropped-image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimg13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-login-affiliate-marketing-email-password-icon-gold-keys-and-locks-5a94a582489de7.24268343151969113829751.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d7d1f3a122fa1930b2de5c409aa1abe8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hero-bike-spare-parts-500x500.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
